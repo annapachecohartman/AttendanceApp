@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="562.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="614.0" prefWidth="622.0" style="-fx-background-color: pink;">
+               <children>
+                  <Button fx:id="logload" layoutX="32.0" layoutY="66.0" mnemonicParsing="false" onAction="#chooseLogFile" text="Load Log" />
+                  <Button fx:id="rostload" layoutX="32.0" layoutY="101.0" mnemonicParsing="false" onAction="#chooseRostFile" text="Load Roster" />
+                  <Button fx:id="printlog" layoutX="127.0" layoutY="66.0" mnemonicParsing="false" onAction="#printLog" text="Print log" />
+                  <Button fx:id="printrost" layoutX="127.0" layoutY="101.0" mnemonicParsing="false" onAction="#printRost" text="Print roster" />
+                  <Button fx:id="printlogcount" layoutX="214.0" layoutY="66.0" mnemonicParsing="false" onAction="#printLogCount" text="Print log count" />
+                  <Button fx:id="printrostcount" layoutX="217.0" layoutY="101.0" mnemonicParsing="false" onAction="#printRostCount" text="Print roster count" />
+                  <ButtonBar layoutX="24.0" layoutY="143.0" prefHeight="40.0" prefWidth="343.0">
+                    <buttons>
+                      <Button fx:id="G_button" mnemonicParsing="false" onAction="#G_Button" text="G" />
+                        <Button fx:id="H_Button" mnemonicParsing="false" onAction="#H_Button" text="H" />
+                        <Button fx:id="I_Button" mnemonicParsing="false" onAction="#I_Button" text="I" />
+                        <Button fx:id="J_button" mnemonicParsing="false" onAction="#J_Button" text="J" />
+                    </buttons>
+                  </ButtonBar>
+                  <ButtonBar layoutX="25.0" layoutY="183.0" prefHeight="40.0" prefWidth="343.0">
+                     <buttons>
+                        <Button fx:id="KQ_Button" mnemonicParsing="false" onAction="#KQ_Button" text="K/Q" />
+                        <Button fx:id="L_Button" mnemonicParsing="false" onAction="#L_Button" text="L" />
+                        <Button fx:id="M_button" mnemonicParsing="false" onAction="#M_Button" text="M" />
+                        <Button fx:id="N_Button" mnemonicParsing="false" onAction="#N_Button" text="N" />
+                     </buttons>
+                  </ButtonBar>
+                  <ButtonBar layoutX="25.0" layoutY="223.0" prefHeight="40.0" prefWidth="343.0">
+                     <buttons>
+                        <Button fx:id="O_Button" mnemonicParsing="false" onAction="#O_Button" text="O" />
+                        <Button fx:id="P_button" mnemonicParsing="false" onAction="#P_Button" text="P" />
+                        <Button fx:id="R_Button" mnemonicParsing="false" onAction="#R_Button" text="print query" />
+                        <Button fx:id="S_Button" mnemonicParsing="false" onAction="#S_Button" prefHeight="26.0" prefWidth="118.0" text="print count" />
+                     </buttons>
+                  </ButtonBar>
+                  <Label layoutX="26.0" layoutY="8.0" text="Anna Hartman" />
+                  <Label layoutX="25.0" layoutY="23.0" text="631002891" />
+                  <Label layoutX="25.0" layoutY="40.0" text="ahartman03@tamu.edu" />
+                  <TextArea fx:id="out" layoutX="14.0" layoutY="282.0" prefHeight="265.0" prefWidth="413.0" style="-fx-background-color: black;" />
+                  <Button fx:id="exitButton" layoutX="503.0" layoutY="12.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="40.0" prefWidth="66.0" style="-fx-background-color: white;" text="Exit" textFill="#e03195">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Button>
+                  <TextField fx:id="firstName" layoutX="442.0" layoutY="131.0" prefHeight="6.0" prefWidth="149.0" />
+                  <Label layoutX="57.0" layoutY="263.0" text="output:" />
+                  <Label layoutX="442.0" layoutY="114.0" text="first name:" />
+                  <TextField fx:id="lastName" layoutX="442.0" layoutY="171.0" prefHeight="6.0" prefWidth="149.0" />
+                  <TextField fx:id="month" layoutX="442.0" layoutY="223.0" prefHeight="6.0" prefWidth="149.0" />
+                  <TextField fx:id="time" layoutX="442.0" layoutY="272.0" prefHeight="6.0" prefWidth="149.0" />
+                  <Label layoutX="444.0" layoutY="155.0" text="last name" />
+                  <Label layoutX="441.0" layoutY="203.0" text="month: (format: MM/DD/YEAR)" />
+                  <Label layoutX="442.0" layoutY="255.0" text="time: (format: hr:mn:sc)" />
+                  <Label layoutX="441.0" layoutY="70.0" prefHeight="17.0" prefWidth="152.0" text="Make sure to fill this out " />
+                  <TextField fx:id="days" layoutX="484.0" layoutY="327.0" prefHeight="25.0" prefWidth="72.0" />
+                  <Label layoutX="470.0" layoutY="310.0" text="# of attendance days:" />
+                  <Button fx:id="submit" layoutX="493.0" layoutY="358.0" mnemonicParsing="false" onAction="#submitText" text="Submit" />
+                  <Label layoutX="190.0" layoutY="16.0" text="Project 1: Attendance Data">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="70.0" text="A" />
+                  <Label layoutX="111.0" layoutY="70.0" text="B" />
+                  <Label layoutX="198.0" layoutY="70.0" text="C" />
+                  <Label layoutX="21.0" layoutY="105.0" text="D" />
+                  <Label layoutX="114.0" layoutY="105.0" text="E" />
+                  <Label layoutX="211.0" layoutY="105.0" text="F" />
+                  <Label layoutX="255.0" layoutY="255.0" text="R                     S" />
+                  <Line endX="495.4000244140625" endY="-3.814697265625E-6" layoutX="127.0" layoutY="59.0" startX="-127.0" startY="-3.814697265625E-6" stroke="#e03195" />
+                  <Line endX="-58.10003662109375" endY="459.39996337890625" layoutX="493.0" layoutY="105.0" startX="-58.10003662109375" startY="-45.499996185302734" stroke="#e03195" />
+                  <Label layoutX="441.0" layoutY="83.0" prefHeight="17.0" prefWidth="167.0" text="before calling a function that" />
+                  <Label layoutX="441.0" layoutY="97.0" prefHeight="17.0" prefWidth="167.0" text="requires its data." />
+                  <Label layoutX="447.0" layoutY="391.0" text="Make sure to press submit!" textFill="#e03195">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
